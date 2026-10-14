@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f7ff;
+    color: #19304f;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    background: #ffffff;
+    padding: 12px 6%;
+    min-height: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 3px 15px #1556a51a;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1556a5;
+    min-width: 0;
+}
+
+.brand img {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.brand h2 {
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.brand p {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #5683b7;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-button {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #2166c2;
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #124b91;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+.hero {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 48px 18px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #124b91, #3987e8, #8bc0ff);
+    animation: muncul 0.8s ease both;
+}
+
+.label {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 12px;
+    background: #ffffff30;
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(25px, 5vw, 38px);
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    color: #d9eaff;
+}
+
+.hero p {
+    max-width: 420px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 22px;
+    background: #ffffff;
+    color: #1556a5;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px #001b4433;
+}
+
+/* PRODUK */
+.products {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.products h2,
+.contact h2 {
+    color: #1556a5;
+    font-size: 26px;
+}
+
+.subtitle {
+    color: #71839b;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 18px #14468218;
+    animation: muncul 0.8s ease both;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px #14468225;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 14px;
+}
+
+.product-label {
+    display: inline-block;
+    color: #3987e8;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.product-info h3 {
+    color: #1556a5;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    color: #71839b;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #1556a5;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.buy-button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 11px 8px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1556a5, #438ff0);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px #1556a533;
+}
+
+/* KONTAK */
+.contact {
+    width: 90%;
+    max-width: 600px;
+    margin: 45px auto;
+    padding: 28px 18px;
+    background: #ffffff;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 18px #14468218;
+    animation: muncul 0.8s ease both;
+}
+
+.contact-label {
+    background: #eaf3ff;
+    color: #2166c2;
+}
+
+.contact-description {
+    margin-top: 8px;
+    color: #71839b;
+    font-size: 13px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 22px 0;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    padding: 14px 10px;
+    background: #eaf3ff;
+    border: 1px solid #dceaff;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+.info-icon {
+    font-size: 20px;
+}
+
+.info-item small {
+    display: block;
+    color: #71839b;
+    font-size: 11px;
+}
+
+.info-item strong {
+    display: block;
+    color: #1556a5;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #2166c2;
+    color: #ffffff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #124b91;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 22px 12px;
+    background: #124b91;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer p + p {
+    margin-top: 4px;
+    color: #d9eaff;
+}
+
+/* ANIMASI */
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 4%;
+    }
+
+    .brand {
+        gap: 7px;
+    }
+
+    .brand img {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+    }
+
+    .brand h2 {
+        font-size: 15px;
+    }
+
+    .brand p {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .header nav {
+        gap: 5px;
+    }
+
+    .nav-button {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 38px 15px;
+    }
+
+    .products h2,
+    .contact h2 {
+        font-size: 23px;
+    }
+
+    .product-list {
+        gap: 10px;
+    }
+
+    .product-card img {
+        height: 125px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .product-info p {
+        font-size: 11px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .buy-button {
+        font-size: 10px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* HP KECIL */
+@media (max-width: 340px) {
+    .brand img {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+    }
+
+    .brand h2 {
+        font-size: 13px;
+    }
+
+    .brand p {
+        font-size: 8px;
+    }
+
+    .nav-button {
+        padding: 6px 7px;
+        font-size: 10px;
+    }
+}
+
+/* MENGHORMATI PENGATURAN ANIMASI PERANGKAT */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
